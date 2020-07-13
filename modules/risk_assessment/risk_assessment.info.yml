@@ -4,5 +4,5 @@ description: 'Create and Publish Risk Assessments'
 core_version_requirement: ^8.7.7 || ^9
 package: 'Risk'
 dependencies:
-  - risk
-  - paragraphs
+  - risk:risk
+  - paragraphs:paragraphs

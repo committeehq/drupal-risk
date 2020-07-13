@@ -1,0 +1,22 @@
+{
+    "name": "drupal/risk",
+    "description": "Risk Assessments and Registers for Drupal",
+    "type": "drupal-module",
+    "authors": [
+        {
+            "name": "David Kitchen",
+            "email": "david@committeehq.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "minimum-stability": "dev",
+    "required": {
+        "drupal/child_entity": "^2.0",
+        "drupal/paragraphs": "^1.12"
+    }
+}
