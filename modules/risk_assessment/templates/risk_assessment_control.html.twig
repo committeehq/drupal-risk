@@ -1,0 +1,22 @@
+{#
+/**
+ * @file risk_assessment_control.html.twig
+ * Default theme implementation to present Control data.
+ *
+ * This template is used when viewing Control pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_risk_assessment_control()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('risk_assessment_control') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

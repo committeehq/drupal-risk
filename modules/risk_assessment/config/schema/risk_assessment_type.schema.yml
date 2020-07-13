@@ -1,0 +1,12 @@
+risk_assessment.risk_assessment_type.*:
+  type: config_entity
+  label: 'Risk assessment type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

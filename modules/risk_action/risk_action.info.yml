@@ -1,0 +1,7 @@
+name: 'Risk actions'
+type: module
+description: 'Log actions related to risk controls'
+core_version_requirement: ^8.7.7 || ^9
+package: 'Risk'
+dependencies:
+  - risk

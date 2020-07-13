@@ -1,0 +1,23 @@
+entity.risk_assessment.add_form:
+  route_name: entity.risk_assessment.add_page
+  title: 'Add Risk assessment'
+  appears_on:
+    - entity.risk_assessment.collection
+
+entity.risk_assessment_type.add_form:
+  route_name: entity.risk_assessment_type.add_form
+  title: 'Add Risk assessment type'
+  appears_on:
+    - entity.risk_assessment_type.collection
+
+entity.risk_assessment_activity_type.add_form:
+  route_name: entity.risk_assessment_activity_type.add_form
+  title: 'Add Activity type'
+  appears_on:
+    - entity.risk_assessment_activity_type.collection
+
+entity.risk_assessment_hazard_type.add_form:
+  route_name: entity.risk_assessment_hazard_type.add_form
+  title: 'Add Hazard type'
+  appears_on:
+    - entity.risk_assessment_hazard_type.collection

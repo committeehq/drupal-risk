@@ -1,0 +1,54 @@
+add risk register entities:
+  title: 'Create new Risk register entities'
+
+administer risk register entities:
+  title: 'Administer Risk register entities'
+  description: 'Allow to access the administration form to configure Risk register entities.'
+  restrict access: true
+
+delete risk register entities:
+  title: 'Delete Risk register entities'
+
+edit risk register entities:
+  title: 'Edit Risk register entities'
+
+view published risk register entities:
+  title: 'View published Risk register entities'
+
+view unpublished risk register entities:
+  title: 'View unpublished Risk register entities'
+
+add risk entities:
+  title: 'Create new Risk entities'
+
+administer risk entities:
+  title: 'Administer Risk entities'
+  description: 'Allow to access the administration form to configure Risk entities.'
+  restrict access: true
+
+delete risk entities:
+  title: 'Delete Risk entities'
+
+edit risk entities:
+  title: 'Edit Risk entities'
+
+view published risk entities:
+  title: 'View published Risk entities'
+
+view unpublished risk entities:
+  title: 'View unpublished Risk entities'
+
+view all risk revisions:
+  title: 'View all Risk revisions'
+
+revert all risk revisions:
+  title: 'Revert all Risk revisions'
+  description: 'Role requires permission <em>view Risk revisions</em> and <em>edit rights</em> for risk entities in question or <em>administer risk entities</em>.'
+
+delete all risk revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Risk revisions</em> and <em>delete rights</em> for risk entities in question or <em>administer risk entities</em>.'
+
+permission_callbacks:
+  - \Drupal\risk_register\RiskRegisterPermissions::generatePermissions
+  - \Drupal\risk_register\RiskRegisterRiskPermissions::generatePermissions

@@ -1,0 +1,55 @@
+entity.risk_register.collection:
+  title: 'Risk registers'
+  route_name: entity.risk_register.collection
+  description: 'List Risk registers'
+  base_route: system.admin_content
+  weight: 100
+
+# Risk register routing definition
+
+entity.risk_register.canonical:
+  route_name: entity.risk_register.canonical
+  base_route: entity.risk_register.canonical
+  title: 'View'
+
+entity.risk_register.edit_form:
+  route_name: entity.risk_register.edit_form
+  base_route: entity.risk_register.canonical
+  title: 'Edit'
+
+entity.risk_register.delete_form:
+  route_name:  entity.risk_register.delete_form
+  base_route:  entity.risk_register.canonical
+  title: Delete
+  weight: 10
+
+
+# Risk routing definition
+
+entity.risk_register_risk.collection:
+  title: 'Risks'
+  route_name: entity.risk_register_risk.collection
+  description: 'Risk on the Register'
+  base_route: entity.risk_register.canonical
+  weight: 5
+
+entity.risk_register_risk.canonical:
+  route_name: entity.risk_register_risk.canonical
+  base_route: entity.risk_register_risk.canonical
+  title: 'View'
+
+entity.risk_register_risk.edit_form:
+  route_name: entity.risk_register_risk.edit_form
+  base_route: entity.risk_register_risk.canonical
+  title: 'Edit'
+
+entity.risk_register_risk.version_history:
+  route_name: entity.risk_register_risk.version_history
+  base_route: entity.risk_register_risk.canonical
+  title: 'Revisions'
+
+entity.risk_register_risk.delete_form:
+  route_name:  entity.risk_register_risk.delete_form
+  base_route:  entity.risk_register_risk.canonical
+  title: Delete
+  weight: 10

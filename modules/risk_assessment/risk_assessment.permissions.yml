@@ -1,0 +1,33 @@
+add risk assessment entities:
+  title: 'Create new Risk assessment entities'
+
+administer risk assessment entities:
+  title: 'Administer Risk assessment entities'
+  description: 'Allow to access the administration form to configure Risk assessment entities.'
+  restrict access: true
+
+delete risk assessment entities:
+  title: 'Delete Risk assessment entities'
+
+edit risk assessment entities:
+  title: 'Edit Risk assessment entities'
+
+view published risk assessment entities:
+  title: 'View published Risk assessment entities'
+
+view unpublished risk assessment entities:
+  title: 'View unpublished Risk assessment entities'
+
+view all risk assessment revisions:
+  title: 'View all Risk assessment revisions'
+
+revert all risk assessment revisions:
+  title: 'Revert all Risk assessment revisions'
+  description: 'Role requires permission <em>view Risk assessment revisions</em> and <em>edit rights</em> for risk assessment entities in question or <em>administer risk assessment entities</em>.'
+
+delete all risk assessment revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Risk assessment revisions</em> and <em>delete rights</em> for risk assessment entities in question or <em>administer risk assessment entities</em>.'
+
+permission_callbacks:
+  - \Drupal\risk_assessment\RiskAssessmentPermissions::generatePermissions

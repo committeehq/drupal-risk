@@ -1,0 +1,12 @@
+risk_assessment.risk_assessment_hazard_type.*:
+  type: config_entity
+  label: 'Hazard type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

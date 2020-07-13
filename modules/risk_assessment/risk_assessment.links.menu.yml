@@ -1,0 +1,40 @@
+
+# Risk assessment menu items definition
+entity.risk_assessment.collection:
+  title: 'Risk assessments'
+  route_name: entity.risk_assessment.collection
+  description: 'List Risk assessment entities'
+  parent: system.admin_content
+  weight: 100
+
+# Risk assessment type menu items definition
+entity.risk_assessment_type.collection:
+  title: 'Risk assessment types'
+  route_name: entity.risk_assessment_type.collection
+  description: 'List Risk assessment type (bundles)'
+  parent: risk.structure
+  weight: 99
+
+# Activity type menu items definition
+entity.risk_assessment_activity_type.collection:
+  title: 'Activity types'
+  route_name: entity.risk_assessment_activity_type.collection
+  description: 'List Activity type (bundles)'
+  parent: risk.structure
+  weight: 99
+
+# Hazard type menu items definition
+entity.risk_assessment_hazard_type.collection:
+  title: 'Hazard types'
+  route_name: entity.risk_assessment_hazard_type.collection
+  description: 'List Hazard type (bundles)'
+  parent: risk.structure
+  weight: 99
+
+# Control settings
+entity.risk_assessment_control.settings:
+  title: 'Control settings'
+  route_name: entity.risk_assessment_control.settings
+  description: 'List Hazard type (bundles)'
+  parent: risk.structure
+  weight: 99

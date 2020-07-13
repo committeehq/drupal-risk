@@ -1,0 +1,7 @@
+entity.risk_assessment_control.settings:
+  path: '/admin/structure/risk/assessment/controls'
+  defaults:
+    _form: '\Drupal\risk_assessment\Form\ControlSettingsForm'
+    _title: 'Control settings'
+  requirements:
+    _permission: 'administer risk assessment entities'

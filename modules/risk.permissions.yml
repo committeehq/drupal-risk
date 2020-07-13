@@ -1,0 +1,4 @@
+administer risk:
+  title: 'Administer Risk'
+  description: 'Allow to access the administration form to configure Risk assessment entities.'
+  restrict access: true

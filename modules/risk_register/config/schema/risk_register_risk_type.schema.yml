@@ -1,0 +1,12 @@
+risk_register.risk_register_risk_type.*:
+  type: config_entity
+  label: 'Risk type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

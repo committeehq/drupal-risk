@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * Contains risk_assessment.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function risk_assessment_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the risk_assessment module.
+    case 'help.page.risk_assessment':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Create and Publish Risk Assessments') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function risk_assessment_theme() {
+  $theme = [];
+  $theme['risk_assessment'] = [
+    'render element' => 'elements',
+    'file' => 'risk_assessment.page.inc',
+    'template' => 'risk_assessment',
+  ];
+  $theme['risk_assessment_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'risk_assessment.page.inc',
+  ];
+
+  $theme['risk_assessment_activity'] = [
+    'render element' => 'elements',
+    'file' => 'risk_assessment_activity.page.inc',
+    'template' => 'risk_assessment_activity',
+  ];
+  $theme['risk_assessment_activity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'risk_assessment_activity.page.inc',
+  ];
+
+  $theme['risk_assessment_hazard'] = [
+    'render element' => 'elements',
+    'file' => 'risk_assessment_hazard.page.inc',
+    'template' => 'risk_assessment_hazard',
+  ];
+  $theme['risk_assessment_hazard_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'risk_assessment_hazard.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function risk_assessment_theme_suggestions_risk_assessment(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#risk_assessment'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'risk_assessment__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_assessment__' . $entity->bundle();
+  $suggestions[] = 'risk_assessment__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_assessment__' . $entity->id();
+  $suggestions[] = 'risk_assessment__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function risk_assessment_theme_suggestions_risk_assessment_activity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#risk_assessment_activity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'risk_assessment_activity__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_assessment_activity__' . $entity->bundle();
+  $suggestions[] = 'risk_assessment_activity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_assessment_activity__' . $entity->id();
+  $suggestions[] = 'risk_assessment_activity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function risk_assessment_theme_suggestions_risk_assessment_hazard(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#risk_assessment_hazard'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'risk_assessment_hazard__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_assessment_hazard__' . $entity->bundle();
+  $suggestions[] = 'risk_assessment_hazard__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_assessment_hazard__' . $entity->id();
+  $suggestions[] = 'risk_assessment_hazard__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

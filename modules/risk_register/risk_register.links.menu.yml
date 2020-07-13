@@ -1,0 +1,25 @@
+
+# Risk register menu items definition
+entity.risk_register.collection:
+  title: 'Risk registers'
+  route_name: entity.risk_register.collection
+  description: 'List Risk register entities'
+  parent: system.admin_content
+  weight: 100
+
+
+# Risk register type menu items definition
+entity.risk_register_type.collection:
+  title: 'Risk register type'
+  route_name: entity.risk_register_type.collection
+  description: 'List Risk register type (bundles)'
+  parent: risk.structure
+  weight: 99
+
+# Risk type menu items definition
+entity.risk_register_risk_type.collection:
+  title: 'Risk type'
+  route_name: entity.risk_register_risk_type.collection
+  description: 'List Risk type (bundles)'
+  parent: risk.structure
+  weight: 99

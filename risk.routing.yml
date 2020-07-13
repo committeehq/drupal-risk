@@ -1,0 +1,7 @@
+risk.structure:
+  path: '/admin/structure/risk'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Risk Management Structure'
+  requirements:
+    _permission: 'administer risk'

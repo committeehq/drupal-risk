@@ -1,0 +1,86 @@
+<?php
+
+/**
+ * @file
+ * Contains risk_register.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function risk_register_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the risk_register module.
+    case 'help.page.risk_register':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Create and manage risk registers') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function risk_register_theme() {
+  $theme = [];
+  $theme['risk_register'] = [
+    'render element' => 'elements',
+    'file' => 'risk_register.page.inc',
+    'template' => 'risk_register',
+  ];
+  $theme['risk_register_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'risk_register.page.inc',
+  ];
+
+  $theme['risk_register_risk'] = [
+    'render element' => 'elements',
+    'file' => 'risk_register_risk.page.inc',
+    'template' => 'risk_register_risk',
+  ];
+  $theme['risk_register_risk_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'risk_register_risk.page.inc',
+  ];
+
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function risk_register_theme_suggestions_risk_register(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#risk_register'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'risk_register__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_register__' . $entity->bundle();
+  $suggestions[] = 'risk_register__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_register__' . $entity->id();
+  $suggestions[] = 'risk_register__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function risk_register_theme_suggestions_risk_register_risk(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#risk_register_risk'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'risk_register_risk__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_register_risk__' . $entity->bundle();
+  $suggestions[] = 'risk_register_risk__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'risk_register_risk__' . $entity->id();
+  $suggestions[] = 'risk_register_risk__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

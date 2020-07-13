@@ -1,0 +1,49 @@
+entity.risk_assessment.collection:
+  title: 'Risk assessments'
+  route_name: entity.risk_assessment.collection
+  description: 'List Risk assessments'
+  base_route: system.admin_content
+  weight: 100
+
+# Risk assessment routing definition
+
+entity.risk_assessment.canonical:
+  route_name: entity.risk_assessment.canonical
+  base_route: entity.risk_assessment.canonical
+  title: 'View'
+
+entity.risk_assessment.edit_form:
+  route_name: entity.risk_assessment.edit_form
+  base_route: entity.risk_assessment.canonical
+  title: 'Edit'
+
+entity.risk_assessment.version_history:
+  route_name: entity.risk_assessment.version_history
+  base_route: entity.risk_assessment.canonical
+  title: 'Revisions'
+
+entity.risk_assessment.delete_form:
+  route_name:  entity.risk_assessment.delete_form
+  base_route:  entity.risk_assessment.canonical
+  title: Delete
+  weight: 10
+
+entity.risk_assessment_type.edit_form:
+  route_name: entity.risk_assessment_type.edit_form
+  base_route: entity.risk_assessment_type.edit_form
+  title: 'Edit'
+
+entity.risk_assessment_activity_type.edit_form:
+  route_name: entity.risk_assessment_activity_type.edit_form
+  base_route: entity.risk_assessment_activity_type.edit_form
+  title: 'Edit'
+
+entity.risk_assessment_hazard_type.edit_form:
+  route_name: entity.risk_assessment_hazard_type.edit_form
+  base_route: entity.risk_assessment_hazard_type.edit_form
+  title: 'Edit'
+
+entity.risk_assessment_control.settings:
+  route_name: entity.risk_assessment_control.settings
+  base_route: entity.risk_assessment_control.settings
+  title: 'Settings'

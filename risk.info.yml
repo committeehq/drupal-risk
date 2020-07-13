@@ -1,0 +1,8 @@
+name: 'Risk'
+type: module
+description: 'Risk Assessments and Management'
+core_version_requirement: ^8.8 || ^9
+package: 'Risk'
+
+dependencies:
+  - user

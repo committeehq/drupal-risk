@@ -1,0 +1,5 @@
+risk.structure:
+  title: 'Risk'
+  description: 'Manage risk structure.'
+  route_name: risk.structure
+  parent: system.admin_structure

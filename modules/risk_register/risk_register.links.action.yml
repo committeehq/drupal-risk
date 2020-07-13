@@ -1,0 +1,23 @@
+entity.risk_register.add_form:
+  route_name: entity.risk_register.add_page
+  title: 'Add Risk register'
+  appears_on:
+    - entity.risk_register.collection
+
+entity.risk_register_type.add_form:
+  route_name: entity.risk_register_type.add_form
+  title: 'Add Risk register type'
+  appears_on:
+    - entity.risk_register_type.collection
+
+entity.risk_register_risk.add_form:
+  route_name: entity.risk_register_risk.add_page
+  title: 'Add Risk'
+  appears_on:
+    - entity.risk_register_risk.collection
+
+entity.risk_register_risk_type.add_form:
+  route_name: entity.risk_register_risk_type.add_form
+  title: 'Add Risk type'
+  appears_on:
+    - entity.risk_register_risk_type.collection
